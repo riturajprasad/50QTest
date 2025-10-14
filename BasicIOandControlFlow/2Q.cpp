@@ -5,7 +5,10 @@ using namespace std;
 
 int Largest(int x, int y, int z)
 {
-    return max(x, max(y, z));
+    int m = x;
+    if(y>m) m = y;
+    if(z>m) m = z;
+    return m;
 }
 
 int main()
