@@ -1,0 +1,23 @@
+// Read three numbers and print the largest.
+
+#include <iostream>
+using namespace std;
+
+int Largest(int x, int y, int z)
+{
+    return max(x, max(y, z));
+}
+
+int main()
+{
+    int x, y, z;
+    cout << "Enter three number: ";
+    if (cin >> x >> y >> z)
+        cout << "Largest = " << Largest(x, y, z);
+    else
+    {
+        cout << "Invalid input" << endl;
+        return 1;
+    }
+    return 0;
+}
